@@ -21,7 +21,7 @@ env:
   ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
   ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
   ARM_USE_OIDC: true
-  TF_VERSION: "1.9.0"
+  TF_VERSION: "1.16.0"
 
 jobs:
   plan:
@@ -47,7 +47,7 @@ jobs:
         run: terraform fmt -check -recursive
 
       - name: Terraform init
-        run: terraform init -backend-config=backend.hcl
+        run: terraform init
 
       - name: Terraform validate
         run: terraform validate
