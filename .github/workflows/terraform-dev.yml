@@ -72,7 +72,7 @@ jobs:
           script: |
             const fs = require('fs');
 
-            let plan = fs.readFileSync('plan.txt', 'utf8');
+            let plan = fs.readFileSync('envs/dev/plan.txt', 'utf8');
 
             // GitHub caps comment bodies at 65536 chars — leave headroom for
             // the surrounding markdown/marker/footer text.
