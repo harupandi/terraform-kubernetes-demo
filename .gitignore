@@ -5,7 +5,6 @@
 *.tfstate.*
 crash.log
 crash.*.log
-backend.tf
 
 # Variable files — real values stay local/CI-only
 *.tfvars
