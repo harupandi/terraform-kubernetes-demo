@@ -10,9 +10,9 @@ locals {
   project_name = "terraform-demo"
 
   environment = "dev"
-  
-  address_space = [ "10.0.0.0/16" ]
-  
+
+  address_space = ["10.0.0.0/16"]
+
   location = "South Central US"
 
   tags = {
