@@ -1,0 +1,21 @@
+# Local Terraform working files
+.terraform/
+.terraform.lock.hcl.bak
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+backend.tf
+
+# Variable files — real values stay local/CI-only
+*.tfvars
+*.tfvars.json
+!example.tfvars
+!*.tfvars.example
+
+# Backend config — environment-specific, not shared
+backend.hcl
+!backend.hcl.example
+
+# Plan output
+*.tfplan
