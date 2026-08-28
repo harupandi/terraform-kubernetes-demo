@@ -18,7 +18,7 @@ variable "tags" {
 }
 
 variable "address_space" {
-  type    = list(string)
+  type = list(string)
 }
 
 variable "subnets" {

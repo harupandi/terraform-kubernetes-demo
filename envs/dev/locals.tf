@@ -7,6 +7,12 @@ locals {
     }
   }
 
+  project_name = "terraform-demo"
+
+  address_space = ["10.0.0.0/16"]
+
+  location = "South Central US"
+
   tags = {
     Project   = var.project_name
     ManagedBy = "Terraform"
