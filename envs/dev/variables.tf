@@ -5,6 +5,7 @@ variable "project_name" {
 
 variable "environment" {
   type = string
+  default = "dev"
 }
 
 variable "location" {
@@ -15,8 +16,4 @@ variable "location" {
 variable "kubernetes_version" {
   type    = string
   default = "1.35"
-}
-
-variable "address_space" {
-  type = list(string)
 }
