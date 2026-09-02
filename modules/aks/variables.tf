@@ -20,6 +20,18 @@ variable "subnet_id" {
   type = string
 }
 
+variable "pod_cidr" {
+  type = string
+}
+
+variable "service_cidr" {
+  type = string
+}
+
+variable "dns_service_ip" {
+  type = string
+}
+
 variable "sku_tier" {
   type    = string
   default = "Standard"

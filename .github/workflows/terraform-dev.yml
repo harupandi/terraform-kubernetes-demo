@@ -23,11 +23,17 @@ env:
   ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
   ARM_USE_OIDC: true
   TF_VERSION: "1.16.0"
+  TF_VAR_location: ${{ vars.LOCATION}}
+  TF_VAR_environment: ${{ vars.ENVIRONMENT}}
+  TF_VAR_pod_cidr: ${{ vars.POD_CIDR}}
+  TF_VAR_service_cidr: ${{ vars.SERVICE_CIDR}}
+  TF_VAR_dns_service_ip: ${{ vars.DNS_SERVICE_IP}}
 
 jobs:
   plan:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    environment: dev-plan
     defaults:
       run:
         working-directory: envs/dev
@@ -36,9 +42,9 @@ jobs:
 
       - uses: azure/login@v2
         with:
-          client-id: ${{ vars.AZURE_CLIENT_ID }}
-          tenant-id: ${{ vars.AZURE_TENANT_ID }}
-          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ env.ARM_CLIENT_ID }}
+          tenant-id: ${{ env.ARM_TENANT_ID }}
+          subscription-id: ${{ env.ARM_SUBSCRIPTION_ID }}
 
       - uses: hashicorp/setup-terraform@v3
         with:
