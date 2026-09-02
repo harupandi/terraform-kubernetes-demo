@@ -17,3 +17,15 @@ variable "kubernetes_version" {
   type    = string
   default = "1.35"
 }
+
+variable "pod_cidr" {
+  type = string
+}
+
+variable "service_cidr" {
+  type = string
+}
+
+variable "dns_service_ip" {
+  type = string
+}
