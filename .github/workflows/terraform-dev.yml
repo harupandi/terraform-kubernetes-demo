@@ -33,6 +33,7 @@ jobs:
   plan:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    environment: dev-plan
     defaults:
       run:
         working-directory: envs/dev
