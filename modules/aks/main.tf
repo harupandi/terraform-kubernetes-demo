@@ -47,6 +47,9 @@ resource "azurerm_kubernetes_cluster" "this" {
   network_profile {
     network_plugin      = "azure"
     network_plugin_mode = "overlay"
+    service_cidr = var.service_cidr
+    pod_cidr = var.pod_cidr
+    dns_service_ip = var.dns_service_ip
   }
 
   lifecycle {

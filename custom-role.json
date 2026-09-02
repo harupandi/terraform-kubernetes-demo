@@ -1,0 +1,11 @@
+{
+  "Name": "AKS Terraform Deployer - Role Assignment",
+  "Actions": [
+    "Microsoft.Authorization/roleAssignments/write",
+    "Microsoft.Authorization/roleAssignments/read",
+    "Microsoft.Authorization/roleAssignments/delete"
+  ],
+  "AssignableScopes": [
+    "/subscriptions/ac300e2a-f7e4-49d1-bbf6-3f566aa4f7bb"
+  ]
+}
